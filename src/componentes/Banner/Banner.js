@@ -1,10 +1,10 @@
-import React from 'react';
-import banner from "../imagens/fundo.png"; 
+import './Banner.css'
 
-function Banner() {
-  return (
-    <img src={banner}  alt="banner" />
-  )
+export const Banner = () => {
+    // JSX
+    return (
+        <header className="banner">
+            <img src="/imagens/banner.png" alt="O banner principal da página do Organo"/>
+        </header>
+    )
 }
-
-export default Banner;
