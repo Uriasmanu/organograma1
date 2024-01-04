@@ -1,6 +1,8 @@
+import '../ListaSuspensa/ListaSuspensa.css'
+
 const ListaSuspensa = (props) => {
     return (
-        <div>
+        <div className='ListaSuspensa'>
             <label>{props.label}</label>
             <select>
                 {props.itens.map(item =>{
