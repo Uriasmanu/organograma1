@@ -4,6 +4,7 @@ import ListaSuspensa from '../ListaSuspensa'
 import './Formulario.css'
 
 const Formulario = () => {
+
     const times = [
         'Programação',
         'Front-End',
@@ -11,12 +12,12 @@ const Formulario = () => {
         'Devops',
         'UX e Design',
         'Mobile',
-        ' Inovação e Gestão'
+        'Inovação e Gestão'
     ]
 
     const aoSalvar = (evento) => {
         evento.preventDefault()
-        console.log('clicou')
+        console.log('Form foi submetido')
     }
 
     return (
@@ -25,10 +26,10 @@ const Formulario = () => {
                 <h2>Preencha os dados para criar o card do colaborador</h2>
                 <CampoTexto obrigatorio={true} label="Nome" placeholder="Digite seu nome" />
                 <CampoTexto obrigatorio={true} label="Cargo" placeholder="Digite seu cargo" />
-                <CampoTexto obrigatorio={true} label="Imagem" placeholder="Digite o endereço da imagem" />
-                <ListaSuspensa itens={times} />
+                <CampoTexto label="Imagem" placeholder="Digite o endereço da imagem" />
+                <ListaSuspensa obrigatorio={true} label="Time" itens={times}/>
                 <Botao>
-                    Criar card
+                    Criar Card
                 </Botao>
             </form>
         </section>
